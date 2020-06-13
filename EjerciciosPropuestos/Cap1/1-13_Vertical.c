@@ -36,11 +36,13 @@ main(){
 
   aux = 0;
   int e = 9;
-  for(int i = 0; i < 10; i++, e--)
+  for(int i = 0; i < 5; i++){
     if(wlong[i] > wlong[e] && wlong[i] > aux)
       aux = wlong[i];
     else if(wlong[e] > aux)
       aux = wlong[e];
+    e--;
+  }
   
   while(aux >= 1){
     for(int i = 0; i < 10; i++){
