@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+ * Copia la entrada a la salida, reemplazando:
+ * cada tabulacion por \t,
+ * cada retroceso por \b y
+ * cada diagonal invertida por \\.
+ */
 main(){
   int c;
   while((c = getchar()) != EOF){
