@@ -1,9 +1,8 @@
 #include <stdio.h>
-/**
- * Imprime el histograma de las frecuencias que aparecen las letras del abcdario
- * leidos a la entrada
- * Vertical 
- */
+/* 1-14:prints a histogram of the frecuencies of different 
+   charcteres in its input.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
 
 main(){
   int c, aux, cont;
@@ -200,7 +199,7 @@ main(){
       r++;
     }
     else
-      printf(" Otros caracteres :");
+      printf(" Other characters :");
     
     for(int l = 0; l < abcd[i]; l++)
       printf( "-");    

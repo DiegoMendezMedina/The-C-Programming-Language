@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-#define IN 1  /* en una palabra */
-#define OUT 0 /* fuera de una palabra */
+#define IN 1  /* inside a word */
+#define OUT 0 /* outside a word */
 
+/* count lines, words, and characters in input */
 main(){
   int c, nl, nw, nc, state;
   state = OUT;
@@ -18,5 +19,5 @@ main(){
       ++nw;
     }      
   }
-  printf(" Numero de lineas: %d\n Numero de palabras: %d\n Numero de caracteres: %d\n", nl, nw, nc);
+  printf(" Number of lines: %d\n Number of words: %d\n Number of characters: %d\n", nl, nw, nc);
 }

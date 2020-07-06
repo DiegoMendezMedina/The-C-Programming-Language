@@ -1,10 +1,10 @@
 #include <stdio.h>
-/**
- * Copia la entrada a la salida, reemplazando:
- * cada tabulacion por \t,
- * cada retroceso por \b y
- * cada diagonal invertida por \\.
- */
+/* 1-10: Copies input to its output, replaces:
+   each tab by \t.
+   each backspace by \b.
+   each backlash by \\.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
 main(){
   int c;
   while((c = getchar()) != EOF){

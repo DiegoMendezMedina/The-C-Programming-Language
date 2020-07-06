@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-#define MAXLINE 1000 /* tamaño maximo de la linea de entrada */
+#define MAXLINE 1000 /* maximum input line size */
 
 int getlinee(char line[], int maxline);
 void copy(char to[], char from[]);
 
 int main(){
-  int len; /* longitud actual de la linea*/
-  int max; /*maxima longitud vista hasta el momento*/
-  char line[MAXLINE]; /*linea de la entrada actual*/
-  char longest[MAXLINE]; /*Donde se guarda la linea mas larga*/
+  int len; /* current line length */
+  int max; /* maximum length so far */
+  char line[MAXLINE]; /* current input line */
+  char longest[MAXLINE]; /* longest line saved here*/
 
   max = 0;
   while((len = getlinee(line, MAXLINE))> 0)
@@ -22,7 +22,7 @@ int main(){
   return 0;
 }
 
-/* getline: lee una linea en s, regresa su longitud. */
+/* getline: reads a line into s, returns its length */
 int getlinee(char s[], int lim){
   int c, i;
 
@@ -36,7 +36,7 @@ int getlinee(char s[], int lim){
   return i;
 }
 
-/* copy; copia 'from' en 'to'; supone que 'to' es suficientemente grande */
+/* copy; copies 'from' into 'to'; assumes 'to' is big enough  */
 void copy(char to[], char from[]){
   int i;
   i = 0;

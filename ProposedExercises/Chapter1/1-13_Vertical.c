@@ -1,8 +1,7 @@
 #include <stdio.h>
-/**
- * Imprime el histograma de las longitud de las palabras de la entrada 
- * Vertical 
- */
+/* prints a histogram of the lengths of words in its input, Vertical.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
 
 #define IN 1
 #define OUT 0

@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-#define MAXLINE 10000     /* máximo tamaño de una linea de entrada */
+#define MAXLINE 10000     /* maximum input line size */
 
-int max;                  /* máxima longitud vista hasta el momento */
-char line [MAXLINE];      /* línea de entrada actual */
-char longest [MAXLINE];   /* aqui se guarda la línea más larga */
+int max;                  /* maximum length seen so far */
+char line [MAXLINE];      /* current input line */
+char longest [MAXLINE];   /* longest line saved here */
 
 int getlinee(void);
 void copy(void);
 
-/* imprime la línea de entrada más larga; vesrsion "especializada" */
+/* prints longest input line, spexialized version */
 int main(){
   int len;
   extern int max;
@@ -26,7 +26,7 @@ int main(){
   return 0;
 }
 
-/* getllinee, version "especializada" */
+/* getllinee, specialized version*/
 int getlinee(void){
   int c, i;
   extern char line[];
@@ -43,7 +43,7 @@ int getlinee(void){
   return i;
 }
 
-/* copy, version "especializada" */
+/* copy, specialized version*/
 void copy(void){
   int i;
   extern char line[], longest[];

@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/**
- *Programa que cuenta espacios en blanco, tabuladores y nuevas lineas.
- */
+/*1-8: Counts blanks, tabs and newlines.
+  For any comment or suggestion, feel free to make a pull request or 
+  contact me at diegomm@ciencias.unam.mx */
 
 main(){
   int c, nb, nt, nnl;
@@ -15,5 +15,5 @@ main(){
     if(c == 10)
       ++nnl;
      }
-  printf("Espacios en blanco: %d\n Tabuladores: %d\n Nuevas lineas: %d\n", nb, nt, nnl);
+  printf("blanks: %d\n tabs: %d\n new lines: %d\n", nb, nt, nnl);
     }

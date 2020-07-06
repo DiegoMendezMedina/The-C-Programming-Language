@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Cuenta digitos, espacios blancos y otros  */
+/* Counts digits, white spaces and others */
 
 main(){
   int c, i, nwhite, nother;
@@ -16,9 +16,9 @@ main(){
       ++nwhite;
     else
       ++nother;
-    printf("digitos =");    
+    printf("digits =");    
     for(int i = 0; i < 10; i++)
       printf( " %d", ndigit[i]);
-    printf(", espacios blancos = %d, otros = %d\n", nwhite, nother);
+    printf(", white spaces = %d, others = %d\n", nwhite, nother);
   
 }

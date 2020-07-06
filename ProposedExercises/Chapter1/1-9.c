@@ -1,7 +1,8 @@
 #include <stdio.h>
-/**
- *Programa que copia ssu entrada a la salida sin espacios.
- */
+/*1-9: Copies input to its output.
+  Replaces every string that has more than one blank with a single one.
+  For any comment or suggestion, feel free to make a pull request or 
+  contact me at diegomm@ciencias.unam.mx */
 main(){
   int c, cont;
   cont = 0;

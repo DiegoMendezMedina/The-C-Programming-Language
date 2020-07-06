@@ -1,13 +1,17 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* tamaño maximo de la linea de entrada */
+/* 1-18: Write a prgram to remove trailing blanks and tabs from each 
+   line of input, and to delete entirele blank lines.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
+#define MAXLINE 1000
 
 int getlinee(char line[], int maxline);
 void cleanRight(char line[], int maxline);
 
 int main(){
-  int len; /* longitud actual de la linea*/
-  int max; /*maxima longitud vista hasta el momento*/
-  char line[MAXLINE]; /*linea de la entrada actual*/
+  int len; 
+  int max; 
+  char line[MAXLINE]; 
 
   max = 0;
   while((len = getlinee(line, MAXLINE))> 0){
@@ -17,7 +21,7 @@ int main(){
   return 0;
 }
 
-/* cleanRight: recorre de derecha a izquierda el arreglo recibido, limpia los espacios y tabulacions */
+/* cleanRight: runs the line from right to left, cleans blanks and tabs*/
 void cleanRight(char s[], int lim){
   int aux;
   
@@ -30,7 +34,7 @@ void cleanRight(char s[], int lim){
     }
     else lim = -1;
 }
-/* getline: lee una linea en s, regresa su longitud. */
+
 int getlinee(char s[], int lim){
   int c, i, j, cont, existe;
   

@@ -2,7 +2,7 @@
 
 int power(int m, int n);
 
-/* Prueba la funcion power */
+/* Tests the power function */
 
 main(){
   int i;
@@ -11,13 +11,13 @@ main(){
   return 0;
 }
 
-/* power: eleva la base de la n-esima potencia; n >=0 */
+/* power: raises base to n-th power; n >=0 */
 
 int power(int base, int n){
-  int p, i;
+  int p;
   p = 1;
 
-  for(i = 1; i <= n; ++i)
+  for(p = 1; n >= 0; --n)
     p = p * base;
   return p;
 }

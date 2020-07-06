@@ -1,12 +1,15 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* tamaño maximo de la linea de entrada */
+/* 1-17: prints all input lines longer tahn 80 characters.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
+#define MAXLINE 1000 
 
 int getlinee(char line[], int maxline);
 
 int main(){
-  int len; /* longitud actual de la linea*/
-  int max; /*maxima longitud vista hasta el momento*/
-  char line[MAXLINE]; /*linea de la entrada actual*/
+  int len; 
+  int max; 
+  char line[MAXLINE];
 
   max = 0;
   while((len = getlinee(line, MAXLINE))> 0)
@@ -16,7 +19,6 @@ int main(){
   return 0;
 }
 
-/* getline: lee una linea en s, regresa su longitud. */
 int getlinee(char s[], int lim){
   int c, i, j;
   lim = lim - 2;

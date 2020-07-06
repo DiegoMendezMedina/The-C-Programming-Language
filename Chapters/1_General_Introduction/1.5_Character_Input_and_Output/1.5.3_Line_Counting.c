@@ -1,5 +1,5 @@
 #include <stdio.h>
-//Cuenta las lineas de la entrada
+/* Counts lines in input */
 main(){
   int c, nl;
   nl = 0;

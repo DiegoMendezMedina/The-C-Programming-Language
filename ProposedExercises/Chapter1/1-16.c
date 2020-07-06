@@ -1,14 +1,20 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* tamaño maximo de la linea de entrada */
+/* 1-16: Revise the main routine of the longest-line program so it will
+   correctly print the length of the arbitrarily long input lines, and as
+   much as possible of text.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
+
+#define MAXLINE 1000
 
 int getlinee(char line[], int maxline);
 void copy(char to[], char from[]);
 
 int main(){
-  int len; /* longitud actual de la linea*/
-  int max; /*maxima longitud vista hasta el momento*/
-  char line[MAXLINE]; /*linea de la entrada actual*/
-  char longest[MAXLINE]; /*Donde se guarda la linea mas larga*/
+  int len; 
+  int max; 
+  char line[MAXLINE]; 
+  char longest[MAXLINE]; 
 
   max = 0;
   while((len = getlinee(line, MAXLINE))> 0)
@@ -17,11 +23,10 @@ int main(){
       copy(longest, line);      
     }
   if(max > 0)
-    printf("Longitud de la cadena mas larga: %d \nCadena mas larga: %s \n", max,longest);
+    printf("length of the longest line: %d \nlongest string: %s \n", max,longest);
   return 0;
 }
 
-/* getline: lee una linea en s, regresa su longitud. */
 int getlinee(char s[], int lim){
   int c, i, j;
   lim = lim - 2;
@@ -47,7 +52,6 @@ int getlinee(char s[], int lim){
   return i;
 }
 
-/* copy; copia 'from' en 'to'; supone que 'to' es suficientemente grande */
 void copy(char to[], char from[]){
   int i;
   i = 0;

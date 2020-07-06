@@ -1,12 +1,16 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* tamaño maximo de la linea de entrada */
+/* 1-19: Write a function reverse that reverses the character string s. 
+   Use it to write a prgoram that reverses its input a line at a time.
+   For any comment or suggestion, feel free to make a pull request or 
+   contact me at diegomm@ciencias.unam.mx */
+#define MAXLINE 1000 
 
 int getlinee(char line[], int maxline);
 void reverse(char line[], int maxline);
 
 int main(){
-  int len; /* longitud actual de la linea*/
-  char line[MAXLINE]; /*linea de la entrada actual*/
+  int len; 
+  char line[MAXLINE];
 
   while((len = getlinee(line, MAXLINE))> 0){
     reverse(line, len);
@@ -15,14 +19,11 @@ int main(){
   return 0;
 }
 
-/* cleanRight: recorre de derecha a izquierda el arreglo recibido, limpia los espacios y tabulacions */
 void reverse(char s[], int lim){
   int aux, ss;
   char l [lim];
   aux = 0;
   ss = lim;
-  //s[lim-1] = '\0';
-  //s[lim-2] = '\n';
    lim = lim - 2;
 
   for(; lim >= 0; lim--)
@@ -33,7 +34,7 @@ void reverse(char s[], int lim){
   for(int j = 0; j <=ss; j++)
     s[j] = l[j];
 }
-/* getline: lee una linea en s, regresa su longitud. */
+
 int getlinee(char s[], int lim){
   int c, i, j;
   
