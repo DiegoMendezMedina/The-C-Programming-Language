@@ -1,24 +1,24 @@
 #include <stdio.h>
-/* 1-20: Write a program detab that replaces tabs in the input with
-   the proper number of blanks to space the next tab stop.
+/* 1-21: Write a program entab that replaces strings of blanks by the
+   minimum number of tabs and blanks to achieve the same spacing.
    For any comment or suggestion, feel free to make a pull request or 
    contact me at diegomm@ciencias.unam.mx */
 
 #define MAXLINE 1000
-#define SPACES 4     /* number of blanks to replace a tab */
+#define SPACES 5     /* number of blanks to replace a tab */
 
 int getlinee(void);
-void detab(void);
+void entab(void);
 
-char line[MAXLINE];
-char lineS[MAXLINE];
+int line[MAXLINE];
+int lineS[MAXLINE];
 
-int main (){
+main(){
   int len;
   extern char lineS[];
-  
-  while((len = getlinee())  > 0 ){
-    detab();
+
+  while(getlinee() > 0 ){
+    entab();
     printf("%s", lineS);
   }
 }
@@ -37,8 +37,7 @@ int getlinee(void){
   return i;
 }
 
-/* detab: copies line to lineS, replacing tabs with spaces */
-void detab(void){
+void entab(void){
   extern char line[];
   extern char lineS[];
   int i, j;
