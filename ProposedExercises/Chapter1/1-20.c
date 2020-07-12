@@ -5,7 +5,7 @@
    contact me at diegomm@ciencias.unam.mx */
 
 #define MAXLINE 1000
-#define SPACES 4     /* number of blanks to replace a tab */
+#define SPACES 8     /* number of blanks to replace a tab */
 
 int getlinee(void);
 void detab(void);

@@ -5,7 +5,7 @@
    contact me at diegomm@ciencias.unam.mx */
 
 #define MAXLINE 1000
-#define SPACES 4     /* number of blanks to replace a tab */
+#define SPACES 8     /* number of blanks to replace a tab */
 
 int getlinee(void);
 void entab(void);
@@ -47,24 +47,24 @@ void entab(void){
   i = j = 0;
   while(line[i] != '\0'){
     if(line[i] == ' '){
-      cont = 1;
       aux = i;
-      while(line[aux] != ' '){
+      cont = 0;
+      while(line[aux] == ' '){
 	++cont;
 	++aux;
       }
-      if(cont % 6 == 0)
+      if(cont % 8 == 0)
 	while(cont > 0){
 	  lineS[j] = '\t';
 	  ++j;
-	  cont = cont - 6;
+	  cont = cont - 8;
 	}
       else{
-	if(cont > 6){
-	  while(cont > 0){
+	if(cont > 8){
+	  while(cont >= 8){
 	    lineS[j] = '\t';
 	    ++j;
-	    cont = cont - 6;
+	    cont = cont - 8;
 	  }
 	  for(int l = 0; l < cont; l++){
 	    lineS[j] = ' ';
@@ -77,7 +77,7 @@ void entab(void){
 	    ++j;
 	  }
       }
-      i = aux + 1;
+      i = aux;
     }
     else{
       lineS[j] = line[i];
