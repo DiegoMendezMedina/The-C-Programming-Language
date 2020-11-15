@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <limits.h>
 /*
   Excercise 2-1. Write a program to determine the ranges of char, short, int, and long variables, both signed and unsigned, by printing appropiate values from standard headers and by direct computation. 
@@ -43,7 +42,7 @@ void main(){
   printf("short : [0, %d]\n", raise(2, sizeof(short)*CHAR_BIT) - 1);
   printf("int   : [0, %u]\n", raise(2, sizeof(int)*CHAR_BIT) - 1);
   printf("long  : [0, %lu]\n", (unsigned long)(raise(2, sizeof(long)*CHAR_BIT))-1);
-    }
+}
 
 int raise(int base, int n){
   if(n == 0)
@@ -54,10 +53,9 @@ int raise(int base, int n){
 }
 
 long l_raise(int base, int n){
-      if(n == 0)
-	return 1;
-      else{
-	return base * l_raise(base, n-1);
-      }
-    }
-
+  if(n == 0)
+    return 1;
+  else{
+    return base * l_raise(base, n-1);
+  }
+}
