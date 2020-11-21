@@ -34,7 +34,6 @@ void main(){
  * s.
  */
 int htoi(char s[]){
-  int n = 0;
   int cont = 0;
 
   if(s[0] != '0' || (s[1] != 'x' && s[1] != 'X'))
@@ -60,7 +59,6 @@ int htoi(char s[]){
  * @return decimal value represented on s.
  */
 int hexa_to_int(char s){
-  int n;
   if(s == 'a' || s == 'A')
     return 10;
   if(s == 'b' || s == 'B')
