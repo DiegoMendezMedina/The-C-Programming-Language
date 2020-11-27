@@ -24,7 +24,8 @@ int main(){
  * any: compare two strings and return the first locationn in the string
  *     s1 where any character from the string s2 occurs.
  * @param s1, s2: strings to compare. 
- * @return the first location in s1 where any character from s2 occurs.
+ * @return The first location in s1 where any character from s2 occurs.
+ *         Otherwhise -1.
  */
 int any(char s1[], char s2[]){
   int i, j;
