@@ -8,9 +8,10 @@ void change(int a[], int b, int c);
 int main(){
   int x, r;
   int array[100];
-  scanf("%d", &x);
   
-  for(int i = 0; i < 101; i++)
+  printf("Number in [0,10]: ");
+  scanf("%d", &x);
+  for(int i = 0; i < 100; i++)
     array[i] = rand() % 11;
   
   selection_sort(array, 100);
