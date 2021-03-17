@@ -19,7 +19,7 @@ void main(){
 }
 
 /**
- *  atoi: converts a string of digits into itś numeric equivalent.
+ *  atoi: converts a string of digits into it's numeric equivalent.
  */
 
 int atoi(char s[]){
