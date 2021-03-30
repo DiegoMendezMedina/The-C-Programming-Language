@@ -21,9 +21,9 @@ int main(){
 
   escape(s, t);
   inverse_escape(t, r);
-  printf("word received: %s", s);
-  printf("after escape: %s\n", t);
-  printf("inverse_escape: %s", r);
+  printf("word received:%s", s);
+  printf("after escape:%s\n", t);
+  printf("inverse_escape:%s", r);
 }
 
 
@@ -161,4 +161,5 @@ void inverse_escape(char s[], char t[]){
       t[j++] = s[i];
       break;
     }
+  t[j] = '\0';
 }
