@@ -1,9 +1,7 @@
 #include <stdio.h>
 /* 1-16: Revise the main routine of the longest-line program so it will
    correctly print the length of the arbitrarily long input lines, and as
-   much as possible of text.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+   much as possible of text. */
 
 #define MAXLINE 1000
 
@@ -23,12 +21,13 @@ int main(){
       copy(longest, line);      
     }
   if(max > 0)
-    printf("length of the longest line: %d \nlongest string: %s \n", max,longest);
+    printf("length of the longest line: %d \nlongest string: %s", max,longest);
   return 0;
 }
 
 int getlinee(char s[], int lim){
   int c, i, j;
+  
   lim = lim - 2;
   for(i = 0; (c = getchar()) != EOF && c != '\n'; i++)
     if(i < lim){

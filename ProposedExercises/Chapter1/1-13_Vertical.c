@@ -1,11 +1,11 @@
 #include <stdio.h>
-/* prints a histogram of the lengths of words in its input, Vertical.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+
+/* 1-13 but vertical */
 
 #define IN 1
 #define OUT 0
-main(){
+
+int main(){
   int c, state, aux, cont;
   int wlong[10];
   state = OUT;
@@ -60,8 +60,9 @@ main(){
     if(cont < 9)
       printf(" %2d ", r);
     else
-      printf(" +%d \n", cont);
+      printf(" >9 \n");
     cont++;
   }
-  
+
+  return 0;
 }

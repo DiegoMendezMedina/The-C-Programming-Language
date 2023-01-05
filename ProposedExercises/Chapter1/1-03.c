@@ -1,9 +1,9 @@
 #include <stdio.h>
-/* Excercise 1-3. Print a heading above the table.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+/* Excercise 1-3. Modify the temperature conversion program 
+   to print a heading above the table.
+*/
 
-main(){
+int main(){
   float fahr, celsius;
   int lower, upper, step;
 
@@ -18,4 +18,6 @@ main(){
     printf("%3.0f\t\t%6.1f\n", fahr, celsius);
     fahr = fahr + step;
   }
+
+  return 0;
 }

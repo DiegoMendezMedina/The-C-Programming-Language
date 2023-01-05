@@ -1,8 +1,7 @@
 #include <stdio.h>
+
 /* 1-21: Write a program entab that replaces strings of blanks by the
-   minimum number of tabs and blanks to achieve the same spacing.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+   minimum number of tabs and blanks to achieve the same spacing. */
 
 #define MAXLINE 1000
 #define SPACES 8     /* number of blanks to replace a tab */
@@ -13,7 +12,7 @@ void entab(void);
 char line[MAXLINE];
 char lineS[MAXLINE];
 
-main(){
+int main(){
   int len;
   extern char lineS[];
 
@@ -21,6 +20,7 @@ main(){
     entab();
     printf("%s", lineS);
   }
+  return 0;
 }
 
 int getlinee(void){
@@ -49,41 +49,32 @@ void entab(void){
     if(line[i] == ' '){
       aux = i;
       cont = 0;
-      while(line[aux] == ' '){
+      while(line[aux] == ' ' && line[aux] != '\0'){
 	++cont;
 	++aux;
       }
       if(cont % 8 == 0)
 	while(cont > 0){
-	  lineS[j] = '\t';
-	  ++j;
-	  cont = cont - 8;
+	  lineS[j++] = '\t';
+	  cont -= 8;
 	}
       else{
 	if(cont > 8){
 	  while(cont >= 8){
-	    lineS[j] = '\t';
-	    ++j;
-	    cont = cont - 8;
+	    lineS[j++] = '\t';
+	    cont -= 8;
 	  }
-	  for(int l = 0; l < cont; l++){
-	    lineS[j] = ' ';
-	    ++j;
-	  }
+	  for(int l = 0; l < cont; l++)
+	    lineS[j++] = ' ';	  
 	}
 	else
-	  for(int l = 0; l < cont; l++){
-	    lineS[j] = ' ';
-	    ++j;
-	  }
+	  for(int l = 0; l < cont; l++)
+	    lineS[j++] = ' ';	  
       }
       i = aux;
     }
-    else{
-      lineS[j] = line[i];
-      ++j;
-      ++i;
-    }
+    else
+      lineS[j++] = line[i++];
   }
   lineS[j] = '\0';
 }

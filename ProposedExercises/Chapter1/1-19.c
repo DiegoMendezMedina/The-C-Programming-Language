@@ -1,8 +1,10 @@
 #include <stdio.h>
-/* 1-19: Write a function reverse that reverses the character string s. 
-   Use it to write a prgoram that reverses its input a line at a time.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+
+/* 1-19: Write a function reverse(s) that reverses the character 
+   string s. Use it to write a program that reverses its inputs 
+   a line at a time. */
+   
+
 #define MAXLINE 1000 
 
 int getlinee(char line[], int maxline);
@@ -20,19 +22,19 @@ int main(){
 }
 
 void reverse(char s[], int lim){
-  int aux, ss;
-  char l [lim];
-  aux = 0;
-  ss = lim;
-   lim = lim - 2;
-
-  for(; lim >= 0; lim--)
-    l[aux++] = s[lim];
-  l[aux++] = '\n';
-  l[aux] = '\0';
-
-  for(int j = 0; j <=ss; j++)
-    s[j] = l[j];
+  int i, j;
+  char temp;
+  
+  j = lim-2;
+  i = 0;
+  for(; i < lim/2; i++, j--){
+    temp = s[i];
+    s[i] = s[j];
+    s[j] = temp;
+  }
+  
+  s[lim-1] = '\n';
+  s[lim]   = '\0';
 }
 
 int getlinee(char s[], int lim){

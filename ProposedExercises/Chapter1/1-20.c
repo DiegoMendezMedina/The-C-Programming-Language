@@ -1,8 +1,7 @@
 #include <stdio.h>
+
 /* 1-20: Write a program detab that replaces tabs in the input with
-   the proper number of blanks to space the next tab stop.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+   the proper number of blanks to space the next tab stop. */
 
 #define MAXLINE 1000
 #define SPACES 8     /* number of blanks to replace a tab */

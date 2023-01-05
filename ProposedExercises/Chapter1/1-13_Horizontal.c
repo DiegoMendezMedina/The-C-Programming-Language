@@ -1,14 +1,17 @@
 #include <stdio.h>
 
-/* prints a histogram of the length of words in its input, Horizontal.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+/* 1-13: Write a program to print a histogram 
+   of the lengths of words in its input. It is easy 
+   to draw the histogram with the bars horizontal; 
+   a vertical orientation is more challenging. */
 
 #define IN 1
 #define OUT 0
-main(){
+
+int main(){
   int c, state, aux, cont;
   int wlong[10];
+  
   state = OUT;
   cont = aux = 0;
   for(int i = 0; i < 10; i++)
@@ -38,9 +41,11 @@ main(){
     if(i < 9)
       printf(" %2d :", r);
     else
-      printf(" +%d :", i);
+      printf(" >9 :");
     for(int l = 0; l < wlong[i]; l++)
 	printf( "-");    
     printf("\n");
   }
+
+  return 0;
 }

@@ -1,9 +1,8 @@
 #include <stdio.h>
-/* Excercise 1-4: Print the Celsius-Farenheit conversion table.
-   For any comment or suggestion, feel free to make a pull request or 
-   contact me at diegomm@ciencias.unam.mx */
+/* Excercise 1-4: Write a program to print the 
+   corresponding Celsius to Farenheit table. */
 
-main(){
+int main(){
   int fahr, celsius;
   int lower, upper, step;
 
@@ -19,4 +18,6 @@ main(){
     printf("%3d\t\t%6d\n", celsius, fahr);
     celsius = celsius + step;
   }
+
+  return 0;
 }
